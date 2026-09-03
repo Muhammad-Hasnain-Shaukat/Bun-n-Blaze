@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-orange: #ff4d00;
+    --brand-ember: #ff9900;
+    --bg-main: #0a0a0c;
+    --text-main: #f5f3e9;
+  }
+
+  .light {
+    --bg-main: #f5f3e9;
+    --text-main: #121216;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0d0d10;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #ff4d00;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff7733;
+  }
+}
+
+/* Street Culture and Visual Flair */
+.text-outline {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.25);
+  color: transparent;
+}
+
+.light .text-outline {
+  -webkit-text-stroke: 1.5px rgba(18, 18, 22, 0.3);
+  color: transparent;
+}
+
+.text-outline-orange {
+  -webkit-text-stroke: 1.5px #ff4d00;
+  color: transparent;
+}
+
+.flame-gradient {
+  background: linear-gradient(135deg, #ff4d00 0%, #ff8800 50%, #ffb700 100%);
+}
+
+.glass-panel {
+  background: rgba(18, 18, 22, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.light .glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.glow-blaze {
+  box-shadow: 0 0 45px -5px rgba(255, 77, 0, 0.45);
+}
+
+.glow-subtle {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+}
+
+/* Subtle Film Grain */
+.bg-grain {
+  background-image: radial-gradient(rgba(255, 77, 0, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
